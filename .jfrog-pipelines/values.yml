@@ -1,0 +1,10 @@
+var:
+  pipelineName: Docker-Cache-Run
+  gitProvider: Github
+  path: harshkumar1/Docker-Cache-Run
+  branches: main
+  #pipelineName: Service-A-Master
+  nodePool: default-dynamic-nodepool
+  artifactory: Artifactory
+  repo: docker-release
+  imageName: harsh.jfrogdev.org/docker-release/docker-cache
