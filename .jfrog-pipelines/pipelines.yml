@@ -37,7 +37,7 @@ pipelines:
             - name: {{ .Values.var.artifactory }}                             # <-- replace with your artifactory integration
         execution:
           onStart:
-            - docker login harsh.jfrogdev.org -u admin -p password
+            - docker login harsh.jfrogdev.org -u admin -p cmVmdGtuOjAxOjE3MDgwNjEyMzM6SDlacnhXY3NiS1AzSGQ5OWxodGl6U3ZmcFBn
             
       - name: docker_push
         type: DockerPush
