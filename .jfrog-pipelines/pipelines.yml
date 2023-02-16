@@ -35,8 +35,8 @@ pipelines:
             - name: dbp_repo_1
           integrations:
             - name: {{ .Values.var.artifactory }}                             # <-- replace with your artifactory integration
-        executions:
-          onstart:
+        execution:
+          onStart:
             - docker login harsh.jfrogdev.org -u admin -p password
             
       - name: docker_push
