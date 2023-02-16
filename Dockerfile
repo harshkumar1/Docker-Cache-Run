@@ -1,3 +1,3 @@
-FROM harsh.jfrogdev.org/docker-remote/alpine:3.17.0
+FROM harsh.jfrogdev.org/docker-remote/alpine:3.15
 
 CMD ["echo", "testing artifactory docker cache"]
