@@ -1,5 +1,5 @@
 resources:
-  - name: dbp_repo_{{ .Values.var.pipelineName }}
+  - name: dbp_repo_1
     type: GitRepo
     configuration:
       gitProvider: {{ .Values.var.gitProvider }}
@@ -7,7 +7,7 @@ resources:
       branches:
         include: {{ .Values.var.branches }} 
 
-  - name: dbp_image_{{ .Values.var.pipelineName }}
+  - name: dbp_image_1
     type: Image
     configuration:
       registry: {{ .Values.var.artifactory }}
@@ -30,7 +30,7 @@ pipelines:
           dockerImageName: {{ .Values.var.imageName }}   # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
-            - name: dbp_repo_{{ .Values.var.pipelineName }}
+            - name: dbp_repo_1
           integrations:
             - name: {{ .Values.var.artifactory }}                             # <-- replace with your artifactory integration
 
@@ -46,4 +46,4 @@ pipelines:
           inputSteps:
             - name: docker_build
           outputResources:
-            - name: dbp_image_{{ .Values.var.pipelineName }}
+            - name: dbp_image_1
