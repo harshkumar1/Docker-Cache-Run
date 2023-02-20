@@ -20,8 +20,6 @@ resources:
       
 pipelines:
   - name: {{ .Values.var.pipelineName }}
-    configuration:
-      nodePool: {{ .Values.var.nodePool }}
     steps:
       - name: docker_build
         type: DockerBuild
