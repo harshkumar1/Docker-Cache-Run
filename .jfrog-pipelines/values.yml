@@ -6,4 +6,4 @@ var:
   nodePool: default-dynamic-nodepool
   artifactory: Artifactory
   repo: docker-local
-  imageName: harsh.jfrogdev.org/docker-local/docker-cache
+  imageName: harshk.jfrogdev.org/docker-local/docker-cache
