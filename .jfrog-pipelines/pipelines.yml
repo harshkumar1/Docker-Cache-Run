@@ -37,16 +37,16 @@ pipelines:
           onStart:
             - docker login harshk.jfrogdev.org -u admin -p cmVmdGtuOjAxOjAwMDAwMDAwMDA6WHRsRlJhM0dHSkdTSzlGTTE0ZVhiS25TOHVG
             
-      - name: docker_push
-        type: DockerPush
-        configuration:
-          affinityGroup: docker_build_push
-          autoPublishBuildInfo: false
-          forceXrayScan: false
-          targetRepository: {{ .Values.var.repo }}
-          integrations:
-            - name: {{ .Values.var.artifactory }}                             # <-- replace with your artifactory integration
-          inputSteps:
-            - name: docker_build
-          outputResources:
-            - name: dbp_image_1
+     # - name: docker_push
+     #   type: DockerPush
+     #   configuration:
+     #     affinityGroup: docker_build_push
+     #     autoPublishBuildInfo: false
+     #     forceXrayScan: false
+     #     targetRepository: {{ .Values.var.repo }}
+     #     integrations:
+     #       - name: {{ .Values.var.artifactory }}                             # <-- replace with your artifactory integration
+     #     inputSteps:
+     #       - name: docker_build
+     #     outputResources:
+     #       - name: dbp_image_1
