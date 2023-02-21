@@ -29,6 +29,7 @@ pipelines:
           dockerFileName: Dockerfile
           dockerImageName: {{ .Values.var.imageName }}   # replace with your image path and name
           dockerImageTag: ${run_number}
+          dockerOptions: --pull
           inputResources:
             - name: dbp_repo_1
           integrations:
